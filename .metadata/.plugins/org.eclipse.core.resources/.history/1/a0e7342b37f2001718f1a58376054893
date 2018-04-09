@@ -1,0 +1,47 @@
+/*
+ * Empty C++ Application
+ */
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+//#include <iostream>
+#include "xil_io.h"
+#include "interrupts.hpp"
+
+//#include <Eigen/Dense>
+int main()
+{
+
+//using Eigen::MatrixXd;
+init_platform();
+print("Hello World1\n\r");
+//  MatrixXd m(2,2);
+//  m(0,0) = 3;
+//  m(1,0) = 2.5;
+//  m(0,1) = -1;
+//  m(1,1) = m(1,0) + m(0,1);
+
+  if (initInterrupts() == XST_FAILURE)
+   {
+   	xil_printf("Failed to initialize interrupts\n\r");
+    return 1;
+    }
+    else
+    {
+   	 xil_printf("Interrupts initialized successfully\n\r");
+    }
+
+  while(1){ // if(m(0,0)+m(0,1)==2){
+//	  print("Magja\r\n");
+//
+//  print("Koniec\r\n");
+  }
+//  //std::cout << m << std::endl;
+
+
+
+    print("Hello World2\n\r");
+
+    cleanup_platform();
+
+}

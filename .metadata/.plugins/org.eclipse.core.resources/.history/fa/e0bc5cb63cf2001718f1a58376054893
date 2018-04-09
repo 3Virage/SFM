@@ -1,0 +1,182 @@
+/*
+ * interrupts.cpp
+ *
+ *  Created on: 21 Dec 2017
+ *      Author: tomasz
+ */
+
+
+
+#include "interrupts.hpp"
+#include "string.h"
+static XScuGic interruptController; // Interrupt Controller Driver
+
+//extern GroupingAlgorithm grouping_algorithm;
+//extern TrackingAlgorithm trackingAlgorithm;
+//extern unsigned int bias;
+
+//extern void indicate_ps_busy();
+//extern void indicate_ps_done();
+extern void clear_irq();
+//extern void set_bias(unsigned int bias);
+
+static void interruptHandler(void *CallBackRef, int Bank, u32 Status)
+{
+	//int16_t x_start, x_end, y_start, y_end;
+	//uint32_t read_data;
+	//int detections_to_read;
+	xil_printf("\n\rInterrupt\n\r");
+//	for (int i = 0; i < 100; ++i){
+//	uint64_t read_data = Xil_In64(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + i * 8);
+//	for(int j =0 ; j < 8; j++)
+//		outbyte(read_data >> (8 * j));
+//	}
+//	for (int i = 0; i < 80; ++i){
+//		Xil_Out64(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + i * 8, 0x0000000000000050);
+//	}
+	//for (int i = 0; i < 120; ++i){
+//		uint16_t xpos = ((i) % 40) * 32 + 16;
+//		uint16_t ypos = (i)/40 * 32 + 16;
+//		uint16_t color = 200;
+//		uint64_t bram_in = ((uint64_t)color & 0xFF) | (((uint64_t)ypos << 22) & 0x1FFC00000) | (((uint64_t)xpos << 33) & 0xFFE00000000);
+//		Xil_Out64(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + i * 8  , bram_in);
+//	}
+
+	for (int i = 0; i < 120; ++i){
+		uint64_t bram_out = Xil_In64(XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR + i * 8  );
+		uint32_t xpos = bram_out & 0xFFE00000000;
+		uint32_t ypos = bram_out & 0x1FFC00000;
+		uint32_t color = bram_out & 0xFF;
+		char buf[100];
+		sprintf(buf,"Point %d %d %d\n",xpos,ypos,color);
+
+	}
+
+	//clear_irq();
+	//std::vector<Detection> detections;
+
+	//int detections_count = Xil_In32(BRAM_CTRL_AXI_BASEADDR);
+	//detections_to_read = misc::min(MAX_INPUT_DETECTIONS, detections_count);
+
+	//for (int i = 0; i < detections_to_read; ++i)
+	//{
+		//
+		//x_end = read_data & 0xffff;
+		//x_start = (read_data >> 16) & 0xffff;
+		//read_data = Xil_In32(BRAM_CTRL_AXI_BASEADDR + BRAM_HEADER_SIZE_IN_BYTES + i * 0x8 + 0x4);
+		//y_end = read_data & 0xffff;
+		//y_start = (read_data >> 16) & 0xffff;
+		//detections.push_back(Detection(x_start, x_end, y_start, y_end));
+	//}
+
+	//std::vector<Detection> grouped_detections;
+	//int detections_to_display = 0;
+
+	/*
+#ifdef USE_GROUPING
+	grouping_algorithm.group_detections(detections, grouped_detections);
+
+# ifdef USE_TRACKING
+	trackingAlgorithm.update_detections(grouped_detections);
+	const std::vector<TrackedDetection> &tracked_detections = trackingAlgorithm.get_tracked_detections();
+
+	// display
+	for (size_t i = 0; (i < tracked_detections.size()) && (detections_to_display < MAX_BBOX); ++i)
+	{
+		if (tracked_detections[i].is_visible())
+		{
+			Xil_Out32(BBOX_REGISTER_AXI_BASEADDR + i * 0x8, (tracked_detections[i].x_end() << 16) | tracked_detections[i].point.x);
+			Xil_Out32(BBOX_REGISTER_AXI_BASEADDR + i * 0x8 + 0x4, (tracked_detections[i].y_end() << 16) | tracked_detections[i].point.y);
+			++detections_to_display;
+		}
+	}
+# else
+	// display
+	detections_to_display = misc::min(grouped_detections.size(), MAX_BBOX);
+	for (int i = 0; i < detections_to_display; ++i)
+	{
+		Xil_Out32(BBOX_REGISTER_AXI_BASEADDR + i * 0x8, (grouped_detections[i].x_end() << 16) | grouped_detections[i].point.x);
+		Xil_Out32(BBOX_REGISTER_AXI_BASEADDR + i * 0x8 + 0x4, (grouped_detections[i].y_end() << 16) | grouped_detections[i].point.y);
+	}
+# endif
+
+#else
+	detections_to_display = misc::min(MAX_BBOX, detections_count);
+
+	for (int i = 0; i < detections_to_display; ++i)
+	{
+		Xil_Out32(BBOX_REGISTER_AXI_BASEADDR + i * 0x8, (detections[i].x_end() << 16) | detections[i].point.x);
+		Xil_Out32(BBOX_REGISTER_AXI_BASEADDR + i * 0x8 + 0x4, (detections[i].y_end() << 16) | detections[i].point.y);
+	}
+#endif
+
+	for (int i = detections_to_display; i < MAX_BBOX; ++i)
+	{
+		Xil_Out32(BBOX_REGISTER_AXI_BASEADDR + i * 0x8, 0x0);
+		Xil_Out32(BBOX_REGISTER_AXI_BASEADDR + i * 0x8 + 0x4, 0x0);
+	}
+*/
+	//clear_irq();
+}
+
+int initInterrupts()
+{
+	int status;
+
+	XScuGic_Config *gicConfig;
+	/*
+	 * Initialize the interrupt controller driver so that it is ready to
+	 * use.
+	 * */
+//	XScuGic_CPUWriteReg(&interruptController, XSCUGIC_EOI_OFFSET, IRQ_PIN);
+	Xil_ExceptionInit();
+
+	gicConfig = XScuGic_LookupConfig(XPAR_PS7_SCUGIC_0_DEVICE_ID);
+	if (NULL == gicConfig)
+	{
+		return XST_FAILURE;
+	}
+
+	status = XScuGic_CfgInitialize(&interruptController, gicConfig, gicConfig->CpuBaseAddress);
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Connect the interrupt controller interrupt handler to the hardware
+	 * interrupt handling logic in the ARM processor.
+	 */
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_IRQ_INT,
+			(Xil_ExceptionHandler) XScuGic_InterruptHandler,
+			(void *) &interruptController);
+
+	/*
+	 * Connect a device driver handler that will be called when an
+	 * interrupt for the device occurs, the device driver handler performs
+	 * the specific interrupt processing for the device
+	 * since the xparameters.h file doesnt detect the external interrupts, we have to manually
+	 * use the IRQ_F2P port numbers ; 91, 90, ect..
+	 */
+	status = XScuGic_Connect(&interruptController, IRQ_PIN,
+			(Xil_ExceptionHandler)interruptHandler,
+			(void *)&interruptController);
+
+	XScuGic_Enable(&interruptController, IRQ_PIN);
+
+	// Enable interrupts in the ARM
+	Xil_ExceptionEnable();
+
+//	XScuGic_SetPriorityTriggerType(&interruptController, IRQ_PIN, 0xa0, 3);
+	XScuGic_SetPriorityTriggerType(&interruptController, IRQ_PIN, 0x0, 0x3);	// 0x3 = rising edge
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+
+

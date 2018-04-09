@@ -1,0 +1,109 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+-include ../makefile.init
+
+RM := rm -rf
+
+# All of the sources participating in the build are defined here
+-include sources.mk
+-include src/subdir.mk
+-include eigen/unsupported/test/subdir.mk
+-include eigen/unsupported/doc/examples/subdir.mk
+-include eigen/unsupported/bench/subdir.mk
+-include eigen/test/subdir.mk
+-include eigen/scripts/subdir.mk
+-include eigen/lapack/subdir.mk
+-include eigen/failtest/subdir.mk
+-include eigen/doc/special_examples/subdir.mk
+-include eigen/doc/snippets/subdir.mk
+-include eigen/doc/examples/subdir.mk
+-include eigen/doc/subdir.mk
+-include eigen/demos/opengl/subdir.mk
+-include eigen/demos/mix_eigen_and_c/subdir.mk
+-include eigen/demos/mandelbrot/subdir.mk
+-include eigen/blas/f2c/subdir.mk
+-include eigen/blas/subdir.mk
+-include eigen/bench/tensors/subdir.mk
+-include eigen/bench/spbench/subdir.mk
+-include eigen/bench/perf_monitoring/gemm/subdir.mk
+-include eigen/bench/btl/libs/ublas/subdir.mk
+-include eigen/bench/btl/libs/tvmet/subdir.mk
+-include eigen/bench/btl/libs/tensors/subdir.mk
+-include eigen/bench/btl/libs/mtl4/subdir.mk
+-include eigen/bench/btl/libs/gmm/subdir.mk
+-include eigen/bench/btl/libs/eigen3/subdir.mk
+-include eigen/bench/btl/libs/eigen2/subdir.mk
+-include eigen/bench/btl/libs/blitz/subdir.mk
+-include eigen/bench/btl/libs/blaze/subdir.mk
+-include eigen/bench/btl/libs/STL/subdir.mk
+-include eigen/bench/btl/libs/BLAS/subdir.mk
+-include eigen/bench/btl/data/subdir.mk
+-include eigen/bench/subdir.mk
+-include subdir.mk
+-include objects.mk
+
+ifneq ($(MAKECMDGOALS),clean)
+ifneq ($(strip $(CC_DEPS)),)
+-include $(CC_DEPS)
+endif
+ifneq ($(strip $(C_UPPER_DEPS)),)
+-include $(C_UPPER_DEPS)
+endif
+ifneq ($(strip $(CXX_DEPS)),)
+-include $(CXX_DEPS)
+endif
+ifneq ($(strip $(S_UPPER_DEPS)),)
+-include $(S_UPPER_DEPS)
+endif
+ifneq ($(strip $(C_DEPS)),)
+-include $(C_DEPS)
+endif
+ifneq ($(strip $(CPP_DEPS)),)
+-include $(CPP_DEPS)
+endif
+endif
+
+-include ../makefile.defs
+
+# Add inputs and outputs from these tool invocations to the build variables 
+ELFSIZE += \
+cppp.elf.size \
+
+
+# All Target
+all: pre-build main-build
+
+# Main-build Target
+main-build: cppp.elf secondary-outputs
+
+# Tool invocations
+cppp.elf: $(OBJS) ../src/lscript.ld $(USER_OBJS)
+	@echo 'Building target: $@'
+	@echo 'Invoking: ARM v7 g++ linker'
+	arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../cppp_bsp/ps7_cortexa9_0/lib -o "cppp.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	@echo 'Finished building target: $@'
+	@echo ' '
+
+cppp.elf.size: cppp.elf
+	@echo 'Invoking: ARM v7 Print Size'
+	arm-none-eabi-size cppp.elf  |tee "cppp.elf.size"
+	@echo 'Finished building: $@'
+	@echo ' '
+
+# Other Targets
+clean:
+	-$(RM) $(CC_DEPS)$(EXECUTABLES)$(OBJS)$(C_UPPER_DEPS)$(CXX_DEPS)$(S_UPPER_DEPS)$(C_DEPS)$(CPP_DEPS)$(ELFSIZE) cppp.elf
+	-@echo ' '
+
+pre-build:
+	-a9-linaro-pre-build-step
+	-@echo ' '
+
+secondary-outputs: $(ELFSIZE)
+
+.PHONY: all clean dependents
+.SECONDARY: main-build pre-build
+
+-include ../makefile.targets

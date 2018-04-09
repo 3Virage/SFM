@@ -1,0 +1,775 @@
+14:48:16 **** Clean-only build of configuration Debug for project cppp ****
+make clean 
+rm -rf  ./src/main.d  ./src/interrupts.o ./src/main.o ./src/platform.o ./src/server_pmod.o  ./8point/src/distance.o ./8point/src/essential.o ./8point/src/fundamental.o ./8point/src/normalize.o ./8point/src/project.o ./8point/src/structure.o  ./8point/SFM.o  ./src/platform.d  ./src/interrupts.d ./src/server_pmod.d  ./8point/src/distance.d ./8point/src/essential.d ./8point/src/fundamental.d ./8point/src/normalize.d ./8point/src/project.d ./8point/src/structure.d  ./8point/SFM.d  cppp.elf.size  cppp.elf
+' '
+14:48:16 **** Incremental Build of configuration Debug for project cppp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/interrupts.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../cppp_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"src/interrupts.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/interrupts.d" -MT"src/interrupts.o" -o "src/interrupts.o" "../src/interrupts.cpp"
+'Finished building: ../src/interrupts.cpp'
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../cppp_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+In file included from c:\sfmv2\sfm\sfm.sdk\sfmnew_bsp\ps7_cortexa9_0\include\mrf24g\utility\ud_inc\internal\wf_global_includes.h:44:0,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/fpga/System.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/System.h:54,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/deIP.h:59,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+c:\sfmv2\sfm\sfm.sdk\sfmnew_bsp\ps7_cortexa9_0\include\mrf24g\utility\wf_customize.h:50:0: warning: "INLINE" redefined
+ #define INLINE
+ 
+In file included from ../src/main.cc:7:0:
+../../cppp_bsp/ps7_cortexa9_0/include/xil_io.h:99:0: note: this is the location of the previous definition
+ #define INLINE inline
+ 
+In file included from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/deIP.h:409:0,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DHCP.h:240:49: note: next member 'uint8_t DHCPMEM_T::rgbOptions [32]' declared here
+     uint8_t             rgbOptions[cbDHCPOptions];
+                                                 ^
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DHCP.h:225:16: note: in the definition of 'struct DHCPMEM_T'
+ typedef struct DHCPMEM_T
+                ^~~~~~~~~
+In file included from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/deIP.h:410:0,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DNS.h:263:5: note: next member 'DNSMEM_T::<anonymous union> DNSMEM_T::<anonymous>' declared here
+     union
+     ^~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DNS.h:248:16: note: in the definition of 'struct DNSMEM_T'
+ typedef struct DNSMEM_T
+                ^~~~~~~~
+In file included from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2:0,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:110:21: note: next member 'DEIPcK* TCPSocket::_pDEIPcK' declared here
+     class DEIPcK *  _pDEIPcK;
+                     ^~~~~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:101:7: note: in the definition of 'class TCPSocket'
+ class TCPSocket {
+       ^~~~~~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:188:21: note: next member 'DEIPcK* UDPSocket::_pDEIPcK' declared here
+     class DEIPcK *  _pDEIPcK;
+                     ^~~~~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:179:7: note: in the definition of 'class UDPSocket'
+ class UDPSocket {
+       ^~~~~~~~~
+In file included from ../src/main.cc:12:0:
+../src/server_pmod.hpp: In function 'void prepareHTTPResponse(char*)':
+../src/server_pmod.hpp:39:78: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   sprintf(data,"%5d %5d %5.4f<br>\r\n",buf_x_out[i],buf_y_out[i],buf_z_out[i]);
+                                                                              ^
+../src/server_pmod.hpp:39:78: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+../src/server_pmod.hpp: In function 'void DemoInitialize()':
+../src/server_pmod.hpp:177:7: error: 'XPAR_PMODWIFI_0_AXI_LITE_SPI_BASEADDR' was not declared in this scope
+       XPAR_PMODWIFI_0_AXI_LITE_SPI_BASEADDR,
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/server_pmod.hpp:178:7: error: 'XPAR_PMODWIFI_0_AXI_LITE_WFGPIO_BASEADDR' was not declared in this scope
+       XPAR_PMODWIFI_0_AXI_LITE_WFGPIO_BASEADDR,
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/server_pmod.hpp:179:7: error: 'XPAR_PMODWIFI_0_AXI_LITE_WFCS_BASEADDR' was not declared in this scope
+       XPAR_PMODWIFI_0_AXI_LITE_WFCS_BASEADDR,
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/server_pmod.hpp:180:7: error: 'XPAR_PMODWIFI_0_S_AXI_TIMER_BASEADDR' was not declared in this scope
+       XPAR_PMODWIFI_0_S_AXI_TIMER_BASEADDR
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/main.cc:12:0:
+../src/server_pmod.hpp:19:25: error: 'XPAR_FABRIC_PMODWIFI_0_WF_INTERRUPT_INTR' was not declared in this scope
+ #define PMODWIFI_VEC_ID XPAR_FABRIC_PMODWIFI_0_WF_INTERRUPT_INTR
+                         ^
+../src/server_pmod.hpp:19:25: note: in definition of macro 'PMODWIFI_VEC_ID'
+ #define PMODWIFI_VEC_ID XPAR_FABRIC_PMODWIFI_0_WF_INTERRUPT_INTR
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/main.o] B³¹d 1
+14:49:20 **** Clean-only build of configuration Debug for project cppp ****
+make clean 
+rm -rf  ./src/main.d  ./src/interrupts.o ./src/main.o ./src/platform.o ./src/server_pmod.o  ./8point/src/distance.o ./8point/src/essential.o ./8point/src/fundamental.o ./8point/src/normalize.o ./8point/src/project.o ./8point/src/structure.o  ./8point/SFM.o  ./src/platform.d  ./src/interrupts.d ./src/server_pmod.d  ./8point/src/distance.d ./8point/src/essential.d ./8point/src/fundamental.d ./8point/src/normalize.d ./8point/src/project.d ./8point/src/structure.d  ./8point/SFM.d  cppp.elf.size  cppp.elf
+' '
+14:49:20 **** Incremental Build of configuration Debug for project cppp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/interrupts.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"src/interrupts.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/interrupts.d" -MT"src/interrupts.o" -o "src/interrupts.o" "../src/interrupts.cpp"
+'Finished building: ../src/interrupts.cpp'
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+In file included from c:\sfmv2\sfm\sfm.sdk\sfmnew_bsp\ps7_cortexa9_0\include\mrf24g\utility\ud_inc\internal\wf_global_includes.h:44:0,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/fpga/System.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/System.h:54,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/deIP.h:59,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+c:\sfmv2\sfm\sfm.sdk\sfmnew_bsp\ps7_cortexa9_0\include\mrf24g\utility\wf_customize.h:50:0: warning: "INLINE" redefined
+ #define INLINE
+ 
+In file included from ../src/main.cc:7:0:
+../../SFMnew_bsp/ps7_cortexa9_0/include/xil_io.h:99:0: note: this is the location of the previous definition
+ #define INLINE inline
+ 
+In file included from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/deIP.h:409:0,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DHCP.h:240:49: note: next member 'uint8_t DHCPMEM_T::rgbOptions [32]' declared here
+     uint8_t             rgbOptions[cbDHCPOptions];
+                                                 ^
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DHCP.h:225:16: note: in the definition of 'struct DHCPMEM_T'
+ typedef struct DHCPMEM_T
+                ^~~~~~~~~
+In file included from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/deIP.h:410:0,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DNS.h:263:5: note: next member 'DNSMEM_T::<anonymous union> DNSMEM_T::<anonymous>' declared here
+     union
+     ^~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DNS.h:248:16: note: in the definition of 'struct DNSMEM_T'
+ typedef struct DNSMEM_T
+                ^~~~~~~~
+In file included from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2:0,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:110:21: note: next member 'DEIPcK* TCPSocket::_pDEIPcK' declared here
+     class DEIPcK *  _pDEIPcK;
+                     ^~~~~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:101:7: note: in the definition of 'class TCPSocket'
+ class TCPSocket {
+       ^~~~~~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:188:21: note: next member 'DEIPcK* UDPSocket::_pDEIPcK' declared here
+     class DEIPcK *  _pDEIPcK;
+                     ^~~~~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:179:7: note: in the definition of 'class UDPSocket'
+ class UDPSocket {
+       ^~~~~~~~~
+In file included from ../src/main.cc:12:0:
+../src/server_pmod.hpp: In function 'void prepareHTTPResponse(char*)':
+../src/server_pmod.hpp:39:78: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   sprintf(data,"%5d %5d %5.4f<br>\r\n",buf_x_out[i],buf_y_out[i],buf_z_out[i]);
+                                                                              ^
+../src/server_pmod.hpp:39:78: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+'Finished building: ../src/main.cc'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/server_pmod.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"src/server_pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/server_pmod.d" -MT"src/server_pmod.o" -o "src/server_pmod.o" "../src/server_pmod.cpp"
+'Finished building: ../src/server_pmod.cpp'
+' '
+'Building file: ../8point/src/distance.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"8point/src/distance.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"8point/src/distance.d" -MT"8point/src/distance.o" -o "8point/src/distance.o" "../8point/src/distance.cpp"
+'Finished building: ../8point/src/distance.cpp'
+' '
+'Building file: ../8point/src/essential.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"8point/src/essential.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"8point/src/essential.d" -MT"8point/src/essential.o" -o "8point/src/essential.o" "../8point/src/essential.cpp"
+'Finished building: ../8point/src/essential.cpp'
+' '
+'Building file: ../8point/src/fundamental.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"8point/src/fundamental.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"8point/src/fundamental.d" -MT"8point/src/fundamental.o" -o "8point/src/fundamental.o" "../8point/src/fundamental.cpp"
+'Finished building: ../8point/src/fundamental.cpp'
+' '
+'Building file: ../8point/src/normalize.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"8point/src/normalize.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"8point/src/normalize.d" -MT"8point/src/normalize.o" -o "8point/src/normalize.o" "../8point/src/normalize.cpp"
+'Finished building: ../8point/src/normalize.cpp'
+' '
+'Building file: ../8point/src/project.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"8point/src/project.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"8point/src/project.d" -MT"8point/src/project.o" -o "8point/src/project.o" "../8point/src/project.cpp"
+'Finished building: ../8point/src/project.cpp'
+' '
+'Building file: ../8point/src/structure.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"8point/src/structure.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"8point/src/structure.d" -MT"8point/src/structure.o" -o "8point/src/structure.o" "../8point/src/structure.cpp"
+'Finished building: ../8point/src/structure.cpp'
+' '
+'Building file: ../8point/SFM.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"8point/SFM.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"8point/SFM.d" -MT"8point/SFM.o" -o "8point/SFM.o" "../8point/SFM.cpp"
+../8point/SFM.cpp: In function 'void SFM_calc(Eigen::Matrix<double, 2, -1>, Eigen::Matrix<double, 2, -1>, uint16_t, uint16_t*, uint16_t*, double*, int*)':
+../8point/SFM.cpp:26:15: warning: unused variable 'foc' [-Wunused-variable]
+  const double foc = 530.0;
+               ^~~
+../8point/SFM.cpp:27:12: warning: unused variable 'width' [-Wunused-variable]
+  const int width = 1280;
+            ^~~~~
+../8point/SFM.cpp:28:12: warning: unused variable 'height' [-Wunused-variable]
+  const int height = 720;
+            ^~~~~~
+'Finished building: ../8point/SFM.cpp'
+' '
+'Building target: cppp.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../SFMnew_bsp/ps7_cortexa9_0/lib -o "cppp.elf"  ./src/interrupts.o ./src/main.o ./src/platform.o ./src/server_pmod.o  ./8point/src/distance.o ./8point/src/essential.o ./8point/src/fundamental.o ./8point/src/normalize.o ./8point/src/project.o ./8point/src/structure.o  ./8point/SFM.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: cppp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size cppp.elf  |tee "cppp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1179467	   4812	31530744	32715023	1f3310f	cppp.elf
+'Finished building: cppp.elf.size'
+' '
+14:54:10 **** Incremental Build of configuration Debug for project cppp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+14:56:38 **** Incremental Build of configuration Debug for project cppp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+14:56:55 **** Clean-only build of configuration Debug for project cppp ****
+make clean 
+rm -rf  ./src/main.d  ./src/interrupts.o ./src/main.o ./src/platform.o ./src/server_pmod.o  ./8point/src/distance.o ./8point/src/essential.o ./8point/src/fundamental.o ./8point/src/normalize.o ./8point/src/project.o ./8point/src/structure.o  ./8point/SFM.o  ./src/platform.d  ./src/interrupts.d ./src/server_pmod.d  ./8point/src/distance.d ./8point/src/essential.d ./8point/src/fundamental.d ./8point/src/normalize.d ./8point/src/project.d ./8point/src/structure.d  ./8point/SFM.d  cppp.elf.size  cppp.elf
+' '
+14:56:56 **** Build of configuration Debug for project cppp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/interrupts.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"src/interrupts.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/interrupts.d" -MT"src/interrupts.o" -o "src/interrupts.o" "../src/interrupts.cpp"
+'Finished building: ../src/interrupts.cpp'
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+In file included from c:\sfmv2\sfm\sfm.sdk\sfmnew_bsp\ps7_cortexa9_0\include\mrf24g\utility\ud_inc\internal\wf_global_includes.h:44:0,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/fpga/System.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/System.h:54,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/deIP.h:59,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+c:\sfmv2\sfm\sfm.sdk\sfmnew_bsp\ps7_cortexa9_0\include\mrf24g\utility\wf_customize.h:50:0: warning: "INLINE" redefined
+ #define INLINE
+ 
+In file included from ../src/main.cc:7:0:
+../../SFMnew_bsp/ps7_cortexa9_0/include/xil_io.h:99:0: note: this is the location of the previous definition
+ #define INLINE inline
+ 
+In file included from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/deIP.h:409:0,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DHCP.h:240:49: note: next member 'uint8_t DHCPMEM_T::rgbOptions [32]' declared here
+     uint8_t             rgbOptions[cbDHCPOptions];
+                                                 ^
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DHCP.h:225:16: note: in the definition of 'struct DHCPMEM_T'
+ typedef struct DHCPMEM_T
+                ^~~~~~~~~
+In file included from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/deIP.h:410:0,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DNS.h:263:5: note: next member 'DNSMEM_T::<anonymous union> DNSMEM_T::<anonymous>' declared here
+     union
+     ^~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DNS.h:248:16: note: in the definition of 'struct DNSMEM_T'
+ typedef struct DNSMEM_T
+                ^~~~~~~~
+In file included from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2:0,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:110:21: note: next member 'DEIPcK* TCPSocket::_pDEIPcK' declared here
+     class DEIPcK *  _pDEIPcK;
+                     ^~~~~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:101:7: note: in the definition of 'class TCPSocket'
+ class TCPSocket {
+       ^~~~~~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:188:21: note: next member 'DEIPcK* UDPSocket::_pDEIPcK' declared here
+     class DEIPcK *  _pDEIPcK;
+                     ^~~~~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:179:7: note: in the definition of 'class UDPSocket'
+ class UDPSocket {
+       ^~~~~~~~~
+In file included from ../src/main.cc:12:0:
+../src/server_pmod.hpp: In function 'void prepareHTTPResponse(char*)':
+../src/server_pmod.hpp:39:78: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   sprintf(data,"%5d %5d %5.4f<br>\r\n",buf_x_out[i],buf_y_out[i],buf_z_out[i]);
+                                                                              ^
+../src/server_pmod.hpp:39:78: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+'Finished building: ../src/main.cc'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/server_pmod.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"src/server_pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/server_pmod.d" -MT"src/server_pmod.o" -o "src/server_pmod.o" "../src/server_pmod.cpp"
+'Finished building: ../src/server_pmod.cpp'
+' '
+'Building file: ../8point/src/distance.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"8point/src/distance.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"8point/src/distance.d" -MT"8point/src/distance.o" -o "8point/src/distance.o" "../8point/src/distance.cpp"
+'Finished building: ../8point/src/distance.cpp'
+' '
+'Building file: ../8point/src/essential.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"8point/src/essential.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"8point/src/essential.d" -MT"8point/src/essential.o" -o "8point/src/essential.o" "../8point/src/essential.cpp"
+'Finished building: ../8point/src/essential.cpp'
+' '
+'Building file: ../8point/src/fundamental.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"8point/src/fundamental.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"8point/src/fundamental.d" -MT"8point/src/fundamental.o" -o "8point/src/fundamental.o" "../8point/src/fundamental.cpp"
+'Finished building: ../8point/src/fundamental.cpp'
+' '
+'Building file: ../8point/src/normalize.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"8point/src/normalize.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"8point/src/normalize.d" -MT"8point/src/normalize.o" -o "8point/src/normalize.o" "../8point/src/normalize.cpp"
+'Finished building: ../8point/src/normalize.cpp'
+' '
+'Building file: ../8point/src/project.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"8point/src/project.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"8point/src/project.d" -MT"8point/src/project.o" -o "8point/src/project.o" "../8point/src/project.cpp"
+'Finished building: ../8point/src/project.cpp'
+' '
+'Building file: ../8point/src/structure.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"8point/src/structure.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"8point/src/structure.d" -MT"8point/src/structure.o" -o "8point/src/structure.o" "../8point/src/structure.cpp"
+'Finished building: ../8point/src/structure.cpp'
+' '
+'Building file: ../8point/SFM.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\INZ\eigen" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"8point/SFM.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"8point/SFM.d" -MT"8point/SFM.o" -o "8point/SFM.o" "../8point/SFM.cpp"
+../8point/SFM.cpp: In function 'void SFM_calc(Eigen::Matrix<double, 2, -1>, Eigen::Matrix<double, 2, -1>, uint16_t, uint16_t*, uint16_t*, double*, int*)':
+../8point/SFM.cpp:26:15: warning: unused variable 'foc' [-Wunused-variable]
+  const double foc = 530.0;
+               ^~~
+../8point/SFM.cpp:27:12: warning: unused variable 'width' [-Wunused-variable]
+  const int width = 1280;
+            ^~~~~
+../8point/SFM.cpp:28:12: warning: unused variable 'height' [-Wunused-variable]
+  const int height = 720;
+            ^~~~~~
+'Finished building: ../8point/SFM.cpp'
+' '
+'Building target: cppp.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../SFMnew_bsp/ps7_cortexa9_0/lib -o "cppp.elf"  ./src/interrupts.o ./src/main.o ./src/platform.o ./src/server_pmod.o  ./8point/src/distance.o ./8point/src/essential.o ./8point/src/fundamental.o ./8point/src/normalize.o ./8point/src/project.o ./8point/src/structure.o  ./8point/SFM.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: cppp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size cppp.elf  |tee "cppp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1179467	   4812	31530744	32715023	1f3310f	cppp.elf
+'Finished building: cppp.elf.size'
+' '
+15:26:12 **** Clean-only build of configuration Debug for project cppp ****
+make clean 
+rm -rf  ./src/main.d  ./src/interrupts.o ./src/main.o ./src/platform.o ./src/server_pmod.o  ./8point/src/distance.o ./8point/src/essential.o ./8point/src/fundamental.o ./8point/src/normalize.o ./8point/src/project.o ./8point/src/structure.o  ./8point/SFM.o  ./src/platform.d  ./src/interrupts.d ./src/server_pmod.d  ./8point/src/distance.d ./8point/src/essential.d ./8point/src/fundamental.d ./8point/src/normalize.d ./8point/src/project.d ./8point/src/structure.d  ./8point/SFM.d  cppp.elf.size  cppp.elf
+' '
+15:26:12 **** Incremental Build of configuration Debug for project cppp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/interrupts.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I"C:\SFMv2\SFM\SFM.sdk\eigen" -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"src/interrupts.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/interrupts.d" -MT"src/interrupts.o" -o "src/interrupts.o" "../src/interrupts.cpp"
+'Finished building: ../src/interrupts.cpp'
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I"C:\SFMv2\SFM\SFM.sdk\eigen" -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+In file included from c:\sfmv2\sfm\sfm.sdk\sfmnew_bsp\ps7_cortexa9_0\include\mrf24g\utility\ud_inc\internal\wf_global_includes.h:44:0,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/fpga/System.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/System.h:54,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/deIP.h:59,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+c:\sfmv2\sfm\sfm.sdk\sfmnew_bsp\ps7_cortexa9_0\include\mrf24g\utility\wf_customize.h:50:0: warning: "INLINE" redefined
+ #define INLINE
+ 
+In file included from ../src/main.cc:7:0:
+../../SFMnew_bsp/ps7_cortexa9_0/include/xil_io.h:99:0: note: this is the location of the previous definition
+ #define INLINE inline
+ 
+In file included from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/deIP.h:409:0,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DHCP.h:240:49: note: next member 'uint8_t DHCPMEM_T::rgbOptions [32]' declared here
+     uint8_t             rgbOptions[cbDHCPOptions];
+                                                 ^
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DHCP.h:225:16: note: in the definition of 'struct DHCPMEM_T'
+ typedef struct DHCPMEM_T
+                ^~~~~~~~~
+In file included from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/deIP.h:410:0,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DNS.h:263:5: note: next member 'DNSMEM_T::<anonymous union> DNSMEM_T::<anonymous>' declared here
+     union
+     ^~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DNS.h:248:16: note: in the definition of 'struct DNSMEM_T'
+ typedef struct DNSMEM_T
+                ^~~~~~~~
+In file included from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2:0,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:110:21: note: next member 'DEIPcK* TCPSocket::_pDEIPcK' declared here
+     class DEIPcK *  _pDEIPcK;
+                     ^~~~~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:101:7: note: in the definition of 'class TCPSocket'
+ class TCPSocket {
+       ^~~~~~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:188:21: note: next member 'DEIPcK* UDPSocket::_pDEIPcK' declared here
+     class DEIPcK *  _pDEIPcK;
+                     ^~~~~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:179:7: note: in the definition of 'class UDPSocket'
+ class UDPSocket {
+       ^~~~~~~~~
+In file included from ../src/main.cc:12:0:
+../src/server_pmod.hpp: In function 'void prepareHTTPResponse(char*)':
+../src/server_pmod.hpp:39:78: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   sprintf(data,"%5d %5d %5.4f<br>\r\n",buf_x_out[i],buf_y_out[i],buf_z_out[i]);
+                                                                              ^
+../src/server_pmod.hpp:39:78: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+'Finished building: ../src/main.cc'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I"C:\SFMv2\SFM\SFM.sdk\eigen" -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/server_pmod.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I"C:\SFMv2\SFM\SFM.sdk\eigen" -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"src/server_pmod.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/server_pmod.d" -MT"src/server_pmod.o" -o "src/server_pmod.o" "../src/server_pmod.cpp"
+'Finished building: ../src/server_pmod.cpp'
+' '
+'Building file: ../8point/src/distance.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I"C:\SFMv2\SFM\SFM.sdk\eigen" -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"8point/src/distance.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"8point/src/distance.d" -MT"8point/src/distance.o" -o "8point/src/distance.o" "../8point/src/distance.cpp"
+'Finished building: ../8point/src/distance.cpp'
+' '
+'Building file: ../8point/src/essential.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I"C:\SFMv2\SFM\SFM.sdk\eigen" -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"8point/src/essential.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"8point/src/essential.d" -MT"8point/src/essential.o" -o "8point/src/essential.o" "../8point/src/essential.cpp"
+'Finished building: ../8point/src/essential.cpp'
+' '
+'Building file: ../8point/src/fundamental.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I"C:\SFMv2\SFM\SFM.sdk\eigen" -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"8point/src/fundamental.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"8point/src/fundamental.d" -MT"8point/src/fundamental.o" -o "8point/src/fundamental.o" "../8point/src/fundamental.cpp"
+'Finished building: ../8point/src/fundamental.cpp'
+' '
+'Building file: ../8point/src/normalize.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I"C:\SFMv2\SFM\SFM.sdk\eigen" -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"8point/src/normalize.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"8point/src/normalize.d" -MT"8point/src/normalize.o" -o "8point/src/normalize.o" "../8point/src/normalize.cpp"
+'Finished building: ../8point/src/normalize.cpp'
+' '
+'Building file: ../8point/src/project.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I"C:\SFMv2\SFM\SFM.sdk\eigen" -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"8point/src/project.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"8point/src/project.d" -MT"8point/src/project.o" -o "8point/src/project.o" "../8point/src/project.cpp"
+'Finished building: ../8point/src/project.cpp'
+' '
+'Building file: ../8point/src/structure.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I"C:\SFMv2\SFM\SFM.sdk\eigen" -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"8point/src/structure.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"8point/src/structure.d" -MT"8point/src/structure.o" -o "8point/src/structure.o" "../8point/src/structure.cpp"
+'Finished building: ../8point/src/structure.cpp'
+' '
+'Building file: ../8point/SFM.cpp'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I"C:\SFMv2\SFM\SFM.sdk\eigen" -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"8point/SFM.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"8point/SFM.d" -MT"8point/SFM.o" -o "8point/SFM.o" "../8point/SFM.cpp"
+../8point/SFM.cpp: In function 'void SFM_calc(Eigen::Matrix<double, 2, -1>, Eigen::Matrix<double, 2, -1>, uint16_t, uint16_t*, uint16_t*, double*, int*)':
+../8point/SFM.cpp:26:15: warning: unused variable 'foc' [-Wunused-variable]
+  const double foc = 530.0;
+               ^~~
+../8point/SFM.cpp:27:12: warning: unused variable 'width' [-Wunused-variable]
+  const int width = 1280;
+            ^~~~~
+../8point/SFM.cpp:28:12: warning: unused variable 'height' [-Wunused-variable]
+  const int height = 720;
+            ^~~~~~
+'Finished building: ../8point/SFM.cpp'
+' '
+'Building target: cppp.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../SFMnew_bsp/ps7_cortexa9_0/lib -o "cppp.elf"  ./src/interrupts.o ./src/main.o ./src/platform.o ./src/server_pmod.o  ./8point/src/distance.o ./8point/src/essential.o ./8point/src/fundamental.o ./8point/src/normalize.o ./8point/src/project.o ./8point/src/structure.o  ./8point/SFM.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: cppp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size cppp.elf  |tee "cppp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1179807	   4812	31530744	32715363	1f33263	cppp.elf
+'Finished building: cppp.elf.size'
+' '
+16:28:58 **** Incremental Build of configuration Debug for project cppp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I"C:\SFMv2\SFM\SFM.sdk\eigen" -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+In file included from c:\sfmv2\sfm\sfm.sdk\sfmnew_bsp\ps7_cortexa9_0\include\mrf24g\utility\ud_inc\internal\wf_global_includes.h:44:0,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/fpga/System.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/System.h:54,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/deIP.h:59,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+c:\sfmv2\sfm\sfm.sdk\sfmnew_bsp\ps7_cortexa9_0\include\mrf24g\utility\wf_customize.h:50:0: warning: "INLINE" redefined
+ #define INLINE
+ 
+In file included from ../src/main.cc:7:0:
+../../SFMnew_bsp/ps7_cortexa9_0/include/xil_io.h:99:0: note: this is the location of the previous definition
+ #define INLINE inline
+ 
+In file included from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/deIP.h:409:0,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DHCP.h:240:49: note: next member 'uint8_t DHCPMEM_T::rgbOptions [32]' declared here
+     uint8_t             rgbOptions[cbDHCPOptions];
+                                                 ^
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DHCP.h:225:16: note: in the definition of 'struct DHCPMEM_T'
+ typedef struct DHCPMEM_T
+                ^~~~~~~~~
+In file included from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/deIP.h:410:0,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DNS.h:263:5: note: next member 'DNSMEM_T::<anonymous union> DNSMEM_T::<anonymous>' declared here
+     union
+     ^~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DNS.h:248:16: note: in the definition of 'struct DNSMEM_T'
+ typedef struct DNSMEM_T
+                ^~~~~~~~
+In file included from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2:0,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:110:21: note: next member 'DEIPcK* TCPSocket::_pDEIPcK' declared here
+     class DEIPcK *  _pDEIPcK;
+                     ^~~~~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:101:7: note: in the definition of 'class TCPSocket'
+ class TCPSocket {
+       ^~~~~~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:188:21: note: next member 'DEIPcK* UDPSocket::_pDEIPcK' declared here
+     class DEIPcK *  _pDEIPcK;
+                     ^~~~~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:179:7: note: in the definition of 'class UDPSocket'
+ class UDPSocket {
+       ^~~~~~~~~
+In file included from ../src/main.cc:12:0:
+../src/server_pmod.hpp: In function 'void prepareHTTPResponse(char*)':
+../src/server_pmod.hpp:39:78: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   sprintf(data,"%5d %5d %5.4f<br>\r\n",buf_x_out[i],buf_y_out[i],buf_z_out[i]);
+                                                                              ^
+../src/server_pmod.hpp:39:78: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+'Finished building: ../src/main.cc'
+' '
+'Building target: cppp.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../SFMnew_bsp/ps7_cortexa9_0/lib -o "cppp.elf"  ./src/interrupts.o ./src/main.o ./src/platform.o ./src/server_pmod.o  ./8point/src/distance.o ./8point/src/essential.o ./8point/src/fundamental.o ./8point/src/normalize.o ./8point/src/project.o ./8point/src/structure.o  ./8point/SFM.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: cppp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size cppp.elf  |tee "cppp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1179807	   4812	31530744	32715363	1f33263	cppp.elf
+'Finished building: cppp.elf.size'
+' '
+16:29:32 **** Incremental Build of configuration Debug for project cppp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:09:04 **** Incremental Build of configuration Debug for project cppp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I"C:\SFMv2\SFM\SFM.sdk\eigen" -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+In file included from c:\sfmv2\sfm\sfm.sdk\sfmnew_bsp\ps7_cortexa9_0\include\mrf24g\utility\ud_inc\internal\wf_global_includes.h:44:0,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/fpga/System.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/System.h:54,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/deIP.h:59,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+c:\sfmv2\sfm\sfm.sdk\sfmnew_bsp\ps7_cortexa9_0\include\mrf24g\utility\wf_customize.h:50:0: warning: "INLINE" redefined
+ #define INLINE
+ 
+In file included from ../src/main.cc:7:0:
+../../SFMnew_bsp/ps7_cortexa9_0/include/xil_io.h:99:0: note: this is the location of the previous definition
+ #define INLINE inline
+ 
+In file included from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/deIP.h:409:0,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DHCP.h:240:49: note: next member 'uint8_t DHCPMEM_T::rgbOptions [32]' declared here
+     uint8_t             rgbOptions[cbDHCPOptions];
+                                                 ^
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DHCP.h:225:16: note: in the definition of 'struct DHCPMEM_T'
+ typedef struct DHCPMEM_T
+                ^~~~~~~~~
+In file included from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/deIP.h:410:0,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DNS.h:263:5: note: next member 'DNSMEM_T::<anonymous union> DNSMEM_T::<anonymous>' declared here
+     union
+     ^~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DNS.h:248:16: note: in the definition of 'struct DNSMEM_T'
+ typedef struct DNSMEM_T
+                ^~~~~~~~
+In file included from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2:0,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:110:21: note: next member 'DEIPcK* TCPSocket::_pDEIPcK' declared here
+     class DEIPcK *  _pDEIPcK;
+                     ^~~~~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:101:7: note: in the definition of 'class TCPSocket'
+ class TCPSocket {
+       ^~~~~~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:188:21: note: next member 'DEIPcK* UDPSocket::_pDEIPcK' declared here
+     class DEIPcK *  _pDEIPcK;
+                     ^~~~~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:179:7: note: in the definition of 'class UDPSocket'
+ class UDPSocket {
+       ^~~~~~~~~
+In file included from ../src/main.cc:12:0:
+../src/server_pmod.hpp: In function 'void prepareHTTPResponse(char*)':
+../src/server_pmod.hpp:39:78: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   sprintf(data,"%5d %5d %5.4f<br>\r\n",buf_x_out[i],buf_y_out[i],buf_z_out[i]);
+                                                                              ^
+../src/server_pmod.hpp:39:78: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+'Finished building: ../src/main.cc'
+' '
+'Building target: cppp.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../SFMnew_bsp/ps7_cortexa9_0/lib -o "cppp.elf"  ./src/interrupts.o ./src/main.o ./src/platform.o ./src/server_pmod.o  ./8point/src/distance.o ./8point/src/essential.o ./8point/src/fundamental.o ./8point/src/normalize.o ./8point/src/project.o ./8point/src/structure.o  ./8point/SFM.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: cppp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size cppp.elf  |tee "cppp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1179807	   4812	31530744	32715363	1f33263	cppp.elf
+'Finished building: cppp.elf.size'
+' '
+17:17:36 **** Incremental Build of configuration Debug for project cppp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:27:09 **** Incremental Build of configuration Debug for project cppp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.cc'
+'Invoking: ARM v7 g++ compiler'
+arm-none-eabi-g++ -DEIGEN_DONT_VECTORIZE -DLOG -Wall -O3 -g3 -I"C:\SFMv2\SFM\SFM.sdk\eigen" -I../../SFMnew_bsp/ps7_cortexa9_0/include -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point\inc" -I"C:\SFMv2\SFM\SFM.sdk\cppp\8point" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../SFMnew_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cc"
+In file included from c:\sfmv2\sfm\sfm.sdk\sfmnew_bsp\ps7_cortexa9_0\include\mrf24g\utility\ud_inc\internal\wf_global_includes.h:44:0,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/fpga/System.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/System.h:54,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/deIP.h:59,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+c:\sfmv2\sfm\sfm.sdk\sfmnew_bsp\ps7_cortexa9_0\include\mrf24g\utility\wf_customize.h:50:0: warning: "INLINE" redefined
+ #define INLINE
+ 
+In file included from ../src/main.cc:7:0:
+../../SFMnew_bsp/ps7_cortexa9_0/include/xil_io.h:99:0: note: this is the location of the previous definition
+ #define INLINE inline
+ 
+In file included from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/deIP.h:409:0,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DHCP.h:240:49: note: next member 'uint8_t DHCPMEM_T::rgbOptions [32]' declared here
+     uint8_t             rgbOptions[cbDHCPOptions];
+                                                 ^
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DHCP.h:225:16: note: in the definition of 'struct DHCPMEM_T'
+ typedef struct DHCPMEM_T
+                ^~~~~~~~~
+In file included from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/deIP.h:410:0,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:64,
+                 from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DNS.h:263:5: note: next member 'DNSMEM_T::<anonymous union> DNSMEM_T::<anonymous>' declared here
+     union
+     ^~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/utility/DNS.h:248:16: note: in the definition of 'struct DNSMEM_T'
+ typedef struct DNSMEM_T
+                ^~~~~~~~
+In file included from ../../SFMnew_bsp/ps7_cortexa9_0/include/PmodWIFI.h:2:0,
+                 from ../src/server_pmod.hpp:13,
+                 from ../src/main.cc:12:
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:110:21: note: next member 'DEIPcK* TCPSocket::_pDEIPcK' declared here
+     class DEIPcK *  _pDEIPcK;
+                     ^~~~~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:101:7: note: in the definition of 'class TCPSocket'
+ class TCPSocket {
+       ^~~~~~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:188:21: note: next member 'DEIPcK* UDPSocket::_pDEIPcK' declared here
+     class DEIPcK *  _pDEIPcK;
+                     ^~~~~~~~
+../../SFMnew_bsp/ps7_cortexa9_0/include/DEIPcK/DEIPcK.h:179:7: note: in the definition of 'class UDPSocket'
+ class UDPSocket {
+       ^~~~~~~~~
+In file included from ../src/main.cc:12:0:
+../src/server_pmod.hpp: In function 'void prepareHTTPResponse(char*)':
+../src/server_pmod.hpp:39:78: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+   sprintf(data,"%5d %5d %5.4f<br>\r\n",buf_x_out[i],buf_y_out[i],buf_z_out[i]);
+                                                                              ^
+../src/server_pmod.hpp:39:78: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+'Finished building: ../src/main.cc'
+' '
+'Building target: cppp.elf'
+'Invoking: ARM v7 g++ linker'
+arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../SFMnew_bsp/ps7_cortexa9_0/lib -o "cppp.elf"  ./src/interrupts.o ./src/main.o ./src/platform.o ./src/server_pmod.o  ./8point/src/distance.o ./8point/src/essential.o ./8point/src/fundamental.o ./8point/src/normalize.o ./8point/src/project.o ./8point/src/structure.o  ./8point/SFM.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: cppp.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size cppp.elf  |tee "cppp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+1179807	   4812	31530744	32715363	1f33263	cppp.elf
+'Finished building: cppp.elf.size'
+' '

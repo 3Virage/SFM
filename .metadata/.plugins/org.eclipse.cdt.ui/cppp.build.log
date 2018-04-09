@@ -1,0 +1,8 @@
+19:18:08 **** Incremental Build of configuration Debug for project cppp ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nie ma nic do zrobienia w `main-build'.
+
+19:18:08 Build Finished (took 511ms)
+

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;cppp/src/server_pmod.h&apos; to &apos;server_pmod.hpp&apos;" description="Rename resource &apos;server_pmod.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/server_pmod.h" name="server_pmod.hpp" stamp="1523101258307" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;cppp/src/main.cc&apos; to &apos;mainold.cc&apos;" description="Rename resource &apos;main.cc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main.cc" name="mainold.cc" stamp="1523128996527" updateReferences="true"/>
+</session>

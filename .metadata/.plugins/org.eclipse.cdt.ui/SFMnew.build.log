@@ -1,0 +1,8 @@
+14:26:51 **** Incremental Build of configuration Debug for project SFMnew ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+
+14:26:51 Build Finished (took 346ms)
+
